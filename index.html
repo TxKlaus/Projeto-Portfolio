@@ -20,7 +20,9 @@
 
     <!-- BOOTSTRAP ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
+    <!--JAVA SCRIPT-->
+    <script src="assets/script.js" defer></script>   
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/swiper-bundle.min.css" />
     
@@ -38,12 +40,29 @@
                 </div><!--logo-->
                 <nav class="menu-desktop">
                     <ul>
-                        <li><a href="#">Sobre mim</a></li>
-                        <li><a href="#">Skills</a></li>
-                        <li><a href="#">Experiencias</a></li>
-                        <li><a href="#">Informações</a></li>
+                        <li><a href="#about-me">Sobre mim</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#experiences">Experiencias</a></li>
+                        <li><a href="#contact">Contato</a></li>
                     </ul>
                 </nav>
+                <div class="open-menu" id="open-menu">
+                    <i class="bi bi-list"></i>
+                </div>
+                <div class="mobile-menu" id="mobile-menu">
+                    <div class="closer">
+                        <i class="bi bi-x-lg"></i>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#experiences">Experiencias</a></li>
+                            <li><a href="#about-me">Sobre mim</a></li>
+                            <li><a href="#contact">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="menu-overlay" id="menuoverlay"></div>
             </div>
         </header>
         <main>
@@ -52,7 +71,7 @@
                     <h1>Full-Stack Developer</h1>
                     <p>Sou Lucas, um desenvolvedor Full-Stack e<br>estudante de Análise e Desenvolvimento<br>de Sistemas pela Universidade Estadual da Paraíba</p>
                     <div class="btn-contato">
-                        <a href="#">
+                        <a href="#contact">
                             <button>Entre em contato</button>
                         </a>
                     </div>
@@ -73,7 +92,7 @@
                     </div>
                 </div>
             </section>
-            <section class="about-me">
+            <section class="about-me" id="about-me">
                 <div class="flex">
                     <div class="about-image">
                         <img class="about-me-image" src="images/Lucas-sobre.jpg" alt="">
@@ -99,7 +118,7 @@
                 </div>
                 
             </section>
-            <section class="experiences">
+            <section class="experiences" id="experiences">
                 <div class="flex">
                     <div class="left-container">
                         <h1>Experiencias</h1>
@@ -128,7 +147,7 @@
                 </div>
             </section>
             <!-- Correção de palavras e nome de classe -->
-            <section class="skills">
+            <section class="skills" id="skills">
                 <div class="all-skills">
                     <div class="title-skills">
                         <h1>Skills</h1>
@@ -145,27 +164,39 @@
                     </div> 
                 </div>
             </section>
-            <section class="projects">
+            <section class="projects" id="projects">
                 <div class="interface">
                     <h1 class="projects-tittle">Projects</h2>
-                    <div class="flex">
+                    <div class="flex-images">
                         <div class="img-port" style="background-image: url(images/imagem.jpg);"></div>
                         <div class="img-port" style="background-image: url(images/imagem.jpg);"></div>
                         <div class="img-port" style="background-image: url(images/imagem.jpg);"></div>
                     </div>
                 </div>
             </section>
-            <section class="contact">
+            <section class="contact" id="contact">
                 <div class="contact-container">
-                    <div class="square">
-                        <h1>teste</h1>
-                        <div class="quadrado quadrado-esquerdo"></div>
+                    <div class="left-square">
+                        <h1>Entre em Contato</h1>
+                        <p>Email:<br>cariolanodcosta@gmail.com</p>
+                        <p>Celular:<br>(83)9 9814-0966</p>
                     </div>
-                    <div class="square">
-                        <div class="quadrado quadrado-direito"></div>
+                    <div class="right-square">
+                        <h1>Me mande uma menssagem</h1>
+                        <form action="">
+                            <input type="text" name="" id="" placeholder="Nome completo" required>
+                            <input type="text" name="" id="" placeholder="Email" required>
+                            <input type="text" name="" id="" placeholder="Celular" required>
+                            <textarea name="" id="" placeholder="Sua menssagem" required></textarea>
+                            <div class="btn-submmit"><input type="button" value="Enviar"></div>
+                        </form>
                     </div>
                 </div>
             </section>
         </main>
+        <footer>
+            <div id="line"></div>
+            <div class="Copyright"><h2>© 2024 Lucas Cariolano. Desenvolvimento por Lucas Cariolano, Design por Rhubi Marçal. Todos os direitos reservados.</h2></div>
+        </footer>
     </body>
 </html>

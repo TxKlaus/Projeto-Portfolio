@@ -1,4 +1,26 @@
-/*const slider = document.querySelectorAll(".slider");
+
+  let openMenu = document.getElementById('open-menu')
+  let menu = document.getElementById('mobile-menu')
+  let overlay = document.getElementById('menuoverlay')
+
+  openMenu.addEventListener('click', ()=>{
+    menu.classList.add("abrir-Menu")
+  })
+  menu.addEventListener('click', ()=>{
+    menu.classList.remove("abrir-Menu")
+  })
+  overlay.addEventListener('click', ()=>{
+    menu.classList.remove("abrir-Menu")
+  })
+
+
+
+
+
+
+
+
+  /*const slider = document.querySelectorAll(".slider");
 const btnPrev = document.getElementById("prev-button");
 const btnNext = document.getElementById("next-button");
 
@@ -33,38 +55,38 @@ function prevSlide(){
     showSlider()
 }
 btnNext.addEventListener('click', nextSlide)
-btnPrev.addEventListener('click', prevSlide)*/
+btnPrev.addEventListener('click', prevSlide)
 var swiper = new Swiper(".slide-container", {
-    slidesPerView: 4,
-    spaceBetween: 20,
-    sliderPerGroup: 4,
-    loop: true,
-    centerSlide: "true",
-    fade: "true",
-    grabCursor: "true",
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets: true,
+  slidesPerView: 4,
+  spaceBetween: 20,
+  sliderPerGroup: 4,
+  loop: true,
+  centerSlide: "true",
+  fade: "true",
+  grabCursor: "true",
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+    520: {
+      slidesPerView: 2,
     },
-  
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      520: {
-        slidesPerView: 2,
-      },
-      768: {
-        slidesPerView: 3,
-      },
-      1000: {
-        slidesPerView: 4,
-      },
+    768: {
+      slidesPerView: 3,
     },
-  });
+    1000: {
+      slidesPerView: 4,
+    },
+  },
+});*/
   

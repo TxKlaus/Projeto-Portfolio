@@ -75,7 +75,7 @@ header a:hover{
     transform: scale(1.05);
 }
 
-header nav ul{
+header nav.menu-desktop ul{
     list-style-type: none;
 }
 
@@ -83,7 +83,63 @@ header nav ul li{
     display: inline-block;
     padding: 0 40px;
 }
+/*ESTILO MENU MOBILE*/
+.open-menu i {
+    font-size: 40px;
+}
+.open-menu{
+    display: none;
 
+}
+.mobile-menu{
+    background-color: #151515;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .2s;
+    border-radius: 15px;
+}
+.mobile-menu.abrir-Menu{
+    width: 70%;
+}
+.mobile-menu.abrir-Menu ~ .menu-overlay{
+    display: block;
+}
+.mobile-menu nav ul{
+    display: flex;
+    text-align: right;
+    flex-direction: column;
+    
+}
+.mobile-menu nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    padding: 20px 4%;
+}
+.mobile-menu nav ul li a:hover{
+    background-color: #00000058;
+    display: block;
+}
+.mobile-menu .closer i{
+    font-size: 30px;
+}
+.mobile-menu .closer{
+    padding: 20px 5%;
+}
+.menu-overlay{
+    background-color: #00000082;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8888;
+    display: none;
+}
 .site-top{
     display: flex;
     justify-content: space-around;
@@ -368,7 +424,8 @@ section.projects {
     width: 100%;   
     box-shadow: 0px 0px 40px 10px rgba(255, 255, 255, 0.082);
 }
-section.projects .flex{
+section.projects .flex-images{
+    display: flex;
     justify-content: space-around;
 }
 .img-port{
@@ -397,4 +454,198 @@ section.projects h1{
     background: radial-gradient(circle, rgba(96, 21, 171, 0.15) 20%, #000000 100%);
     height: 790px;
     width: 100%; 
+}
+.contact-container{
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    padding: 120px;
+}
+.left-square{
+    text-align: center;
+    background-color: #151515a2;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.329);
+    border-radius: 20px;
+    padding: 30px;
+    width: 500px;
+    height: 250px;
+}
+.left-square h1{
+    margin-bottom: 20px;
+}
+.right-square{
+    text-align: center;
+    padding: 30px;
+    background-color: #151515a2;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.329);
+    border-radius: 20px;
+    width: 500px;
+    height: auto;
+}
+.right-square h1{
+    margin-bottom: 25px;
+}
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 13px;
+}
+form input, form textarea{
+    width: 100%;
+    background-color: #37373780;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+    border-radius: 15px;
+    color: #fff;
+    
+}
+form textarea{
+    resize: none;
+    max-height: 200px;
+}
+form .btn-submmit input{
+    width: 150px;
+    margin-top: 20px;
+    color:whitesmoke;
+    background-color: darkorchid;
+    cursor: pointer;
+    border: 0;
+    border-radius: 30px;
+    transition: .2s;
+}
+form .btn-submmit input:hover{
+    box-shadow: 0px 0px 8px rgb(98, 31, 131);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+#line {
+    width: 100%;
+    border-bottom: 1px solid #373737;
+}
+.Copyright h2{
+    background: radial-gradient(circle, rgba(96, 21, 171, 0.15) 20%, #000000 100%);
+    color: rgba(255, 255, 255, 0.548);
+    font-size: 10px;
+    text-align: center;
+    padding: 30px;
+    font-weight: 500; 
+}
+@media screen and (max-width: 1020px){
+
+    /*TOPO DO SITE*/
+    .menu-desktop, .btn-contato, .about-image, .center-container{
+        display: none;
+    }
+    .site-top{
+        flex-direction: column;
+        margin-bottom: 100px;   
+    }
+    .principal-left{ 
+        margin-left: 30px;
+        margin-top: 150px;
+        text-align: center;
+    }
+    .principal-right {
+        display: flex;
+        justify-content: center;
+        margin-left: 35px;
+        margin-top: 70px;
+    }
+    /*SOBRE MIM*/
+    .about-me{
+        margin-top: 500px;
+    }
+    .about-me .card-about .btn-contato{
+        text-align: center;
+    }
+    /*EXPERIENCIAS*/
+    .experiences H1{
+        text-align: center;
+    }
+    section.experiences .right-container .card-exp{
+        margin-left: 0;
+    }
+    .left-container{
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        margin-right: 10px;
+    }
+    .left-container h1{
+        font-size: 40px;
+        margin-left: 0;
+        text-decoration: underline;
+        text-decoration-color: rgb(132, 42, 177);
+        text-decoration-thickness: 12%;
+        text-underline-offset: 9px;
+    }
+    .right-container{
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        margin-top: 290px;
+        margin-left: -340px;
+    }
+    section.skills .skills-set{
+        display: flex;
+        margin-left: 0px;
+        background-color: #151515a2;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.329);
+        width: 400px;
+        margin-top: 80px;
+        margin-left: 70px;
+        border-radius: 20px;
+    }
+    .skills-set img {
+        width: 70px; /* Define uma largura para as imagens */
+        height: auto;
+        border: 2px solid rgb(132, 42, 177); /* Espessura e cor da linha */
+        border-radius: 16px;
+        display: block; /* Para que a linha fique abaixo da imagem */
+        padding: 10px; /* Espaço entre a imagem e a linha */
+    }
+    section.projects {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding: 50px 4%;
+        background: radial-gradient(circle, rgba(96, 21, 171, 0.15) 20%, #000000 100%);
+        height: 850px;
+        width: 100%;   
+        margin-bottom: 850px; 
+        box-shadow: 0px 0px 40px 10px rgba(255, 255, 255, 0.082);
+    }
+    .projects .flex-images{
+        flex-direction: column;
+
+    }
+    .img-port{
+        margin-top: 30px;
+    }
+    .contact{
+        display: flex;
+        margin-bottom: 100px; 
+        justify-content: center;
+        background: radial-gradient(circle, rgba(96, 21, 171, 0.15) 20%, #000000 100%);   
+        height: 690px;
+        width: 100%; 
+        
+    }
+    .contact .contact-container{
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        padding: 60px;
+        
+    }    
+    .open-menu{
+        display: block;
+        
+    }
 }
