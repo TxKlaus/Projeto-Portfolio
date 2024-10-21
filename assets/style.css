@@ -227,12 +227,7 @@ header nav ul li{
     height: 290px;
 }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
+
 
 section.about-me{
     background: radial-gradient(circle, rgba(96, 21, 171, 0.15) 20%, #000000 100%);
@@ -539,6 +534,10 @@ form .btn-submmit input:hover{
 @media screen and (max-width: 1020px){
 
     /*TOPO DO SITE*/
+    header .interface{
+        margin-top: 0px;
+        margin-bottom: -37px;
+    }
     .menu-desktop, .btn-contato, .about-image, .center-container{
         display: none;
     }
