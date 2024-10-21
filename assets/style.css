@@ -535,8 +535,9 @@ form .btn-submmit input:hover{
 
     /*TOPO DO SITE*/
     header .interface{
-        margin-top: 0px;
+        margin-top: -37px;
         margin-bottom: -37px;
+        width: 100%;
     }
     .menu-desktop, .btn-contato, .about-image, .center-container{
         display: none;
