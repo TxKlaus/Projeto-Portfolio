@@ -629,7 +629,7 @@ form .btn-submmit input:hover{
     }
     .contact{
         display: flex;
-        margin-bottom: 100px; 
+        margin-bottom: 101px; 
         justify-content: center;
         background: radial-gradient(circle, rgba(96, 21, 171, 0.15) 20%, #000000 100%);   
         width: 100%; 
