@@ -185,11 +185,11 @@
                     </div>
                     <div class="right-square">
                         <h1>Me mande uma menssagem</h1>
-                        <form action="">
-                            <input type="text" name="" id="" placeholder="Nome completo" required>
-                            <input type="text" name="" id="" placeholder="Email" required>
-                            <input type="text" name="" id="" placeholder="Celular" required>
-                            <textarea name="" id="" placeholder="Sua menssagem" required></textarea>
+                        <form action="./php/email_send.php" method="POST" class="card">
+                            <input type="text" name="name" id="name" placeholder="Nome completo" required>
+                            <input type="text" name="email" id="email" placeholder="Email" required>
+                            <input type="text" name="phonenumber" id="phonenumber" placeholder="Celular" required>
+                            <textarea name="message" id="message" placeholder="Sua menssagem" required></textarea>
                             <div class="btn-submmit"><input type="button" value="Enviar"></div>
                         </form>
                     </div>
